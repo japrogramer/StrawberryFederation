@@ -1,0 +1,30 @@
+version: '3.6'
+services:
+  app:
+    build:
+      context: .
+      dockerfile: ./DockerFiles/App/Dockerfile
+    image: e_app:latest
+    restart: always
+    environment:
+      BEARER: Bearer 2cc873c09692ed71d654588b
+    volumes:
+      - ./backend:/var/www/app
+  caddy:
+    build:
+      context: .
+      dockerfile: ./DockerFiles/Caddy/Dockerfile
+    image: e_caddy:latest
+    depends_on:
+      - "app"
+    restart: always
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./frontend/build:/var/www/app
+      - ./Caddy/production-Caddyfile:/etc/caddy/Caddyfile
+      - caddy_certs:/root/.caddy
+volumes:
+  db_data:
+  caddy_certs:

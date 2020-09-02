@@ -1,0 +1,29 @@
+{
+   "name": "ApolloServer",
+   "version": "1.0.0",
+   "description": "",
+   "main": "index.js",
+   "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1",
+      "start": "node src/index.js"
+   },
+   "keywords": [],
+   "author": "",
+   "license": "ISC",
+   "dependencies": {
+      "@apollo/gateway": "^0.20.0",
+      "apollo-server": "^2.17.0",
+      "apollo-server-koa": "^2.6.3",
+      "graphql": "^14.7.0",
+      "js-to-ts-converter": "^0.16.3",
+      "koa": "^2.7.0",
+      "lodash": "^4.17.11",
+      "reflect-metadata": "^0.1.10",
+      "sqlite3": "^4.0.8"
+   },
+   "devDependencies": {
+      "@types/node": "^8.0.29",
+      "ts-node": "3.3.0",
+      "typescript": "^3.3.3333"
+   }
+}
