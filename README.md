@@ -1,3 +1,3 @@
-# - Work on Strawberry Federatio
+# - Work on Strawberry Federation
 
 Federation Demo
